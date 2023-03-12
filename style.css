@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oswald:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+.header {
+    background-color: #D4EFF0;
+    height: 100vh;
+}
+.ham {
+    position: absolute;
+    z-index: 11;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.nav-list {
+    display: block;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: -1000px;
+    left: 0;
+    width: 100vw;
+    z-index: 10;
+    height: 100vh;
+    transition: top .3s ease;
+}
+.activeMenu {
+    top: 0;
+}
+.nav-list-container {
+    backdrop-filter: blur('10px');
+    gap: 15px;
+    height: 30px;
+    text-align: center;
+}
+.nav-list-container li {
+    list-style: none;
+}
+.nav-list-container li a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+.active span:nth-child(1) {
+    transform: translateY(12px) rotateZ(45deg);
+}
+
+.active span:nth-child(3) {
+    transform: translateY(-12px) rotateZ(-45deg);
+}
+
+.active span:nth-child(2) {
+    opacity: 0;
+}
+.left {
+    float: left;
+}
+.text {
+    margin-left: 45%;
+    margin-top: 20%;
+    font-size: 28px;
+    font-weight: 800;
+    color: #A5E0E2;
+}
+.logo {
+    margin: 20px;
+}
+.logo img {
+    width: 15vw;
+}
+.ham span {
+    border-radius: 10px;
+    height: 5px;
+    width: 50px;
+    display: block;
+    background-color: white;
+    transition: transform .3s ease;
+}
+.right {
+    position: relative;
+    width: 60vw;
+    height: 90vh;
+    border-radius: 20px 0 0 20px;
+    background-color: #FF5C25;
+    float: right;
+    padding: 30px0;
+}
+.about {
+    margin: 60px;
+    padding-top: 15vw;
+    padding-left: 10vw;
+    color: white;
+}
+.about button {
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    font-size: large;
+}
+/* middle style */
+.middle {
+    background-color: #D4EFF0;
+    text-align: center;
+    padding: 10%;
+}
+.feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 0 10%;
+    background-color: #A5E0E2;
+}
+.feature {
+    text-align: center;
+    flex-basis: 20vw;
+    margin: 50px 0;
+    padding: 10px;
+    border-left: 1px solid gray;
+}
+.feature:nth-child(1) {
+    border: none;
+}
+.feature img {
+    max-width: 7vw;
+    margin: 30px 0;
+}
+.experience {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+.experience div button {
+    background-color: #FF5C25;
+    padding: 5px 10px;
+    margin: 30px 0;
+}
+.experience-text {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.experience-image img {
+    width: 15vw;
+    transform: rotateZ(-35deg);
+    box-shadow: -10px -10px 15px 0px rgba(0, 0, 0, 0.5);
+}
+.experience-image1 img {
+    width: 90%;
+}
+/* footer style */
+.footer {
+    background-color: #D4EFF0;
+    padding: 10%;
+}
+.app-info-container {
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+/* technology style */
+.technology {
+    text-align: center;
+    padding: 5% 15%;
+    background-color: #A5E0E2;
+}
+.right-img {
+    position: absolute;
+    top: 18vh;
+    left: -10vw;
+    width: 25vw;
+}
+.technology p {
+    margin-bottom: 35px;
+}
+.technology button {
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 150px;
+    border: none;
+    color: white;
+    background-color: #FF5C25;
+}
+@media screen and (max-width:750px) {
+    .right-img {
+        top: 40vh;
+    }
+    .experience {
+        flex-direction: column;
+    }
+    .experience-text {
+        width: 70vw;
+        text-align: center;
+    }
+    .experience-image {
+        width: 50vw;
+    }
+    .tech-items {
+        flex-wrap: wrap;
+    }
+    .app-info-container {
+        flex-direction: column;
+    }
+}
